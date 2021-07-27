@@ -808,6 +808,9 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -873,6 +876,9 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -919,6 +925,9 @@
 						}
 					],
 					"request": {
+						"auth": {
+							"type": "noauth"
+						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -938,16 +947,6 @@
 				{
 					"name": "Org",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{anypoint_access_token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -976,16 +975,6 @@
 				{
 					"name": "Org",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{anypoint_access_token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "PUT",
 						"header": [],
 						"body": {
@@ -1014,16 +1003,6 @@
 				{
 					"name": "Org",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{anypoint_access_token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
@@ -1050,16 +1029,6 @@
 				{
 					"name": "Org By ID",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{anypoint_access_token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -1089,16 +1058,6 @@
 						"disabledSystemHeaders": {}
 					},
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{anypoint_access_token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -1271,16 +1230,6 @@
 				{
 					"name": "rolegroups roles",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{anypoint_access_token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"url": {
@@ -1320,16 +1269,6 @@
 				{
 					"name": "rolegroups role",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{anypoint_access_token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -1800,7 +1739,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users?type=all&offset=0&limit=200",
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
 							"host": [
 								"{{cloudhub-host}}"
 							],
@@ -1815,17 +1754,20 @@
 								{
 									"key": "type",
 									"value": "all",
-									"description": "specify the type of the user you want to retrive [all, host, proxy]"
+									"description": "specify the type of the user you want to retrive [all, host, proxy]",
+									"disabled": true
 								},
 								{
 									"key": "offset",
 									"value": "0",
-									"description": "The number of records to omit from the response."
+									"description": "The number of records to omit from the response.",
+									"disabled": true
 								},
 								{
 									"key": "limit",
 									"value": "200",
-									"description": "Maximum records to retrieve per request. default 25, min 0, max 500"
+									"description": "Maximum records to retrieve per request. default 25, min 0, max 500",
+									"disabled": true
 								}
 							],
 							"variable": [
@@ -1863,7 +1805,7 @@
 								},
 								{
 									"key": "userId",
-									"value": "00f1897d-de38-4da2-bdbc-5a93abdf76d3"
+									"value": "fa4bb84b-2b64-4331-b926-0153e48103d8"
 								}
 							]
 						}
@@ -1883,7 +1825,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"username\": \"max_the_mule\",\n  \"firstName\" : \"Max\",\n  \"lastName\" : \"The Mule\",\n  \"email\" : \"max_the_mule@example.com\",\n  \"phoneNumber\" : \"111-111-1111\",\n  \"password\": \"u@k7jGDQ$C8n4m\"\n}\n",
+							"raw": "{\n  \"username\": \"max_the_mule3\",\n  \"firstName\" : \"Max\",\n  \"lastName\" : \"The Mule\",\n  \"email\" : \"max_the_mule@example.com\",\n  \"phoneNumber\" : \"111-111-1111\",\n  \"password\": \"u@k7jGDQ$C8n4m\"\n}\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2056,7 +1998,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[ \"1c0d1a43-4d91-4b52-bcc6-cff8ecf0c3a3\",\n  \"dc52bf66-b0d8-4cda-9ae8-45a5f085ead4\",\n  \"5314c476-1cd4-49be-ba4e-1d67f6c052c3\" ]",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2111,8 +2053,243 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "User Roles",
+			"item": [
+				{
+					"name": "Create User Role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"821d84e6-ee22-4646-bf25-5461d49c9690\": {\n        \"org\": \"aa1f55d6-213d-4f60-845c-207286484cd1\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/roles",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"users",
+								":userid",
+								"roles"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "userid",
+									"value": "{{cloudhub-user-id}}",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Rolegroup",
+			"item": [
+				{
+					"name": "User Rolegroups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"organizationId\": \"{{cloudhub-org}}\",\n    \"userId\": \"{{cloudhub-user-id}}\",\n    \"roleGroupId\": \"{{cloudhub-rolegroup-id}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/rolegroups?limit=25&offset=0",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"users",
+								":userid",
+								"rolegroups"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "25",
+									"description": "Pagination parameter for how many results to return"
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "Pagination parameter to start returning results from this position of matches"
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "userid",
+									"value": "{{cloudhub-user-id}}",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User Rolegroup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/rolegroups/:rolegroupid",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"users",
+								":userid",
+								"rolegroups",
+								":rolegroupid"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "userid",
+									"value": "{{cloudhub-user-id}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "rolegroupid",
+									"value": "{{cloudhub-rolegroup-id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User Rolegroup",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/rolegroups/:rolegroupid",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"users",
+								":userid",
+								"rolegroups",
+								":rolegroupid"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "userid",
+									"value": "{{cloudhub-user-id}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "rolegroupid",
+									"value": "{{cloudhub-rolegroup-id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{anypoint_access_token}}",
+				"type": "string"
+			}
+		]
+	},
 	"event": [
 		{
 			"listen": "prerequest",
