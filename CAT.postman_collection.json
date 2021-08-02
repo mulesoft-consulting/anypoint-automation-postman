@@ -1610,6 +1610,330 @@
 			"name": "Invite",
 			"item": [
 				{
+					"name": "User",
+					"item": [
+						{
+							"name": "get Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"host": [
+										"{{cloudhub-host}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"organizations",
+										":orgId",
+										"users"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "all",
+											"description": "specify the type of the user you want to retrive [all, host, proxy]",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "0",
+											"description": "The number of records to omit from the response.",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "200",
+											"description": "Maximum records to retrieve per request. default 25, min 0, max 500",
+											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{cloudhub-org}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get User by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
+									"host": [
+										"{{cloudhub-host}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"organizations",
+										":orgId",
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{cloudhub-org}}"
+										},
+										{
+											"key": "userId",
+											"value": "fa4bb84b-2b64-4331-b926-0153e48103d8"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post User",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "XSRF-TOKEN",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"max_the_mule3\",\n  \"firstName\" : \"Max\",\n  \"lastName\" : \"The Mule\",\n  \"email\" : \"max_the_mule@example.com\",\n  \"phoneNumber\" : \"111-111-1111\",\n  \"password\": \"u@k7jGDQ$C8n4m\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"host": [
+										"{{cloudhub-host}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"organizations",
+										":orgId",
+										"users"
+									],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{cloudhub-org}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Users",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "XSRF-TOKEN",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\n    {\n        \"username\": \"max_the_mule\",\n        \"firstName\": \"Max\",\n        \"lastName\": \"The Mule\",\n        \"email\": \"maxthemule@example.com\",\n        \"phoneNumber\": \"111-111-1111\",\n        \"password\": \"u@k7jGDQ$C8n4m\"\n    }\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"host": [
+										"{{cloudhub-host}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"organizations",
+										":orgId",
+										"users"
+									],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{cloudhub-org}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update Single User",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "XSRF-TOKEN",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"firstName\" : \"Max\",\n  \"lastName\" : \"The Mule\",\n  \"email\" : \"maxthemule@example.com\",\n  \"phoneNumber\" : \"111-111-1111\",\n  \"password\": \"u@k7jGDQ$C8n4m\",\n  \"enabled\": true,\n  \"properties\" : {\n    \"cs_auth\" :{\n        \"town\": \"here\"\n    }\n  }\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
+									"host": [
+										"{{cloudhub-host}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"organizations",
+										":orgId",
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{cloudhub-org}}"
+										},
+										{
+											"key": "userId",
+											"value": "00f1897d-de38-4da2-bdbc-5a93abdf76d3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete Users",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "XSRF-TOKEN",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[ \"1c0d1a43-4d91-4b52-bcc6-cff8ecf0c3a3\",\n  \"dc52bf66-b0d8-4cda-9ae8-45a5f085ead4\",\n  \"5314c476-1cd4-49be-ba4e-1d67f6c052c3\" ]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"host": [
+										"{{cloudhub-host}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"organizations",
+										":orgId",
+										"users"
+									],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{cloudhub-org}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete Single User",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "XSRF-TOKEN",
+										"value": "{{csrftoken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
+									"host": [
+										"{{cloudhub-host}}"
+									],
+									"path": [
+										"accounts",
+										"api",
+										"organizations",
+										":orgId",
+										"users",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "orgId",
+											"value": "{{cloudhub-org}}"
+										},
+										{
+											"key": "userId",
+											"value": "00f1897d-de38-4da2-bdbc-5a93abdf76d3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					]
+				},
+				{
 					"name": "get invites",
 					"request": {
 						"method": "GET",
@@ -1702,330 +2026,6 @@
 								{
 									"key": "orgId",
 									"value": "{{cloudhub-org}}"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						]
-					}
-				}
-			]
-		},
-		{
-			"name": "User",
-			"item": [
-				{
-					"name": "get Users",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
-							"host": [
-								"{{cloudhub-host}}"
-							],
-							"path": [
-								"accounts",
-								"api",
-								"organizations",
-								":orgId",
-								"users"
-							],
-							"query": [
-								{
-									"key": "type",
-									"value": "all",
-									"description": "specify the type of the user you want to retrive [all, host, proxy]",
-									"disabled": true
-								},
-								{
-									"key": "offset",
-									"value": "0",
-									"description": "The number of records to omit from the response.",
-									"disabled": true
-								},
-								{
-									"key": "limit",
-									"value": "200",
-									"description": "Maximum records to retrieve per request. default 25, min 0, max 500",
-									"disabled": true
-								}
-							],
-							"variable": [
-								{
-									"key": "orgId",
-									"value": "{{cloudhub-org}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get User by ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
-							"host": [
-								"{{cloudhub-host}}"
-							],
-							"path": [
-								"accounts",
-								"api",
-								"organizations",
-								":orgId",
-								"users",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "orgId",
-									"value": "{{cloudhub-org}}"
-								},
-								{
-									"key": "userId",
-									"value": "fa4bb84b-2b64-4331-b926-0153e48103d8"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "post User",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "XSRF-TOKEN",
-								"value": "{{csrftoken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"username\": \"max_the_mule3\",\n  \"firstName\" : \"Max\",\n  \"lastName\" : \"The Mule\",\n  \"email\" : \"max_the_mule@example.com\",\n  \"phoneNumber\" : \"111-111-1111\",\n  \"password\": \"u@k7jGDQ$C8n4m\"\n}\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
-							"host": [
-								"{{cloudhub-host}}"
-							],
-							"path": [
-								"accounts",
-								"api",
-								"organizations",
-								":orgId",
-								"users"
-							],
-							"variable": [
-								{
-									"key": "orgId",
-									"value": "{{cloudhub-org}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update Users",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "XSRF-TOKEN",
-								"value": "{{csrftoken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "[\n    {\n        \"username\": \"max_the_mule\",\n        \"firstName\": \"Max\",\n        \"lastName\": \"The Mule\",\n        \"email\": \"maxthemule@example.com\",\n        \"phoneNumber\": \"111-111-1111\",\n        \"password\": \"u@k7jGDQ$C8n4m\"\n    }\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
-							"host": [
-								"{{cloudhub-host}}"
-							],
-							"path": [
-								"accounts",
-								"api",
-								"organizations",
-								":orgId",
-								"users"
-							],
-							"variable": [
-								{
-									"key": "orgId",
-									"value": "{{cloudhub-org}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update Single User",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "XSRF-TOKEN",
-								"value": "{{csrftoken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"firstName\" : \"Max\",\n  \"lastName\" : \"The Mule\",\n  \"email\" : \"maxthemule@example.com\",\n  \"phoneNumber\" : \"111-111-1111\",\n  \"password\": \"u@k7jGDQ$C8n4m\",\n  \"enabled\": true,\n  \"properties\" : {\n    \"cs_auth\" :{\n        \"town\": \"here\"\n    }\n  }\n}\n",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
-							"host": [
-								"{{cloudhub-host}}"
-							],
-							"path": [
-								"accounts",
-								"api",
-								"organizations",
-								":orgId",
-								"users",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "orgId",
-									"value": "{{cloudhub-org}}"
-								},
-								{
-									"key": "userId",
-									"value": "00f1897d-de38-4da2-bdbc-5a93abdf76d3"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete Users",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "XSRF-TOKEN",
-								"value": "{{csrftoken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "[ \"1c0d1a43-4d91-4b52-bcc6-cff8ecf0c3a3\",\n  \"dc52bf66-b0d8-4cda-9ae8-45a5f085ead4\",\n  \"5314c476-1cd4-49be-ba4e-1d67f6c052c3\" ]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
-							"host": [
-								"{{cloudhub-host}}"
-							],
-							"path": [
-								"accounts",
-								"api",
-								"organizations",
-								":orgId",
-								"users"
-							],
-							"variable": [
-								{
-									"key": "orgId",
-									"value": "{{cloudhub-org}}"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete Single User",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "XSRF-TOKEN",
-								"value": "{{csrftoken}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
-							"host": [
-								"{{cloudhub-host}}"
-							],
-							"path": [
-								"accounts",
-								"api",
-								"organizations",
-								":orgId",
-								"users",
-								":userId"
-							],
-							"variable": [
-								{
-									"key": "orgId",
-									"value": "{{cloudhub-org}}"
-								},
-								{
-									"key": "userId",
-									"value": "00f1897d-de38-4da2-bdbc-5a93abdf76d3"
 								}
 							]
 						}
@@ -2271,6 +2271,667 @@
 								{
 									"key": "rolegroupid",
 									"value": "{{cloudhub-rolegroup-id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teams",
+			"item": [
+				{
+					"name": "get teams",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams?ascending=true",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams"
+							],
+							"query": [
+								{
+									"key": "ancestor_team_id",
+									"value": "",
+									"description": "[Array or String] team_id that must appear in the team's ancestor_team_ids.",
+									"disabled": true
+								},
+								{
+									"key": "parent_team_id",
+									"value": null,
+									"description": "[Array or String] team_id of the immediate parent of the team to return.",
+									"disabled": true
+								},
+								{
+									"key": "team_id",
+									"value": null,
+									"description": "id of the team to return.",
+									"disabled": true
+								},
+								{
+									"key": "team_type",
+									"value": null,
+									"description": "return only teams that are of this type",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": null,
+									"description": "A search string to use for case-insensitive partial matches on team name",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request. \nDefault: 25\nMin: 0 \nMax: 500 ",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": null,
+									"description": "The field to sort on.\nDefault value: team_name\nEnum values:  team_name, created_at, team_id",
+									"disabled": true
+								},
+								{
+									"key": "ascending",
+									"value": "true",
+									"description": "Whether to sort ascending or descending.\nDefault value: true"
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get team by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "ac6b996b-b77c-4193-986d-d6e4daa11446"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create team",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"parent_team_id\": \"99c41e16-1075-40ae-8c8b-d722a8256f81\",\n  \"team_name\": \"New Team\",\n  \"team_type\": \"internal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update team",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"team_name\": \"Terraform Test\",\n  \"team_type\": \"internal\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "move team",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"parent_team_id\": \"59a065cf-2d31-4488-9d67-d380a820166b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/parent",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"parent"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete team",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "ac6b996b-b77c-4193-986d-d6e4daa11446"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team groupmappings",
+			"item": [
+				{
+					"name": "get groupmappings",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings?membership_type=&search=",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"groupmappings"
+							],
+							"query": [
+								{
+									"key": "membership_type",
+									"value": "",
+									"description": "Include the group access mappings that grant the provided membership type By default, all group access mappings are returned"
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "A search string to use for case-insensitive partial matches on external group name"
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value: 0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request. \nDefault: 25\nMin: 0 \nMax: 500 ",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team members",
+			"item": [
+				{
+					"name": "get members",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/members",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"members"
+							],
+							"query": [
+								{
+									"key": "membership_type",
+									"value": "",
+									"description": "Include the group access mappings that grant the provided membership type By default, all group access mappings are returned",
+									"disabled": true
+								},
+								{
+									"key": "identity_type",
+									"value": "",
+									"description": "A search string to use for case-insensitive partial matches on external group name",
+									"disabled": true
+								},
+								{
+									"key": "member_ids",
+									"value": "",
+									"description": "[Array or String] Include the members of the team that have ids in this list",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "Maximum records to retrieve per request. \nDefault: 25\nMin: 0 \nMax: 500 ",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value:0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request.\nDefault value: 25\nMin value: 0\nMax value: 500",
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": "",
+									"description": "The field to sort on.\nDefault value: identity_type\nEnum values: identity_type, name",
+									"disabled": true
+								},
+								{
+									"key": "ascending",
+									"value": "true",
+									"description": "Whether to sort ascending or descending",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add member",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"membership_type\": \"member\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/members/:userId",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"members",
+								":userId"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value:0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request.\nDefault value: 25\nMin value: 0\nMax value: 500",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								},
+								{
+									"key": "userId",
+									"value": "18f23771-c78a-4be2-af8f-1bae66f43942"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete member",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/members/:userId",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"members",
+								":userId"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value:0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request.\nDefault value: 25\nMin value: 0\nMax value: 500",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								},
+								{
+									"key": "userId",
+									"value": "18f23771-c78a-4be2-af8f-1bae66f43942"
 								}
 							]
 						}
