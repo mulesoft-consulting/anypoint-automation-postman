@@ -2939,6 +2939,218 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Team roles",
+			"item": [
+				{
+					"name": "get roles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "role_id",
+									"value": "",
+									"description": "return only role assignments containing one of the supplied role_ids",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "",
+									"description": "A search string to use for case-insensitive partial matches on role name",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request. \nDefault: 25\nMin: 0 \nMax: 500 ",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add roles",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"role_id\": \"d74ef94a-4292-4896-b860-b05bd7f90d6d\",\n    \"context_params\": {\n      \"org\": \"{{cloudhub-org}}\"\n    }\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value:0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request.\nDefault value: 25\nMin value: 0\nMax value: 500",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete roles",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"role_id\": \"833ab9ca-0c72-45ba-9764-1df83240db57\",\n    \"context_params\": {\n      \"org\": \"{{cloudhub-org}}\"\n    }\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "offset",
+									"value": "0",
+									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value:0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "250",
+									"description": "Maximum records to retrieve per request.\nDefault value: 25\nMin value: 0\nMax value: 500",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}",
+									"type": "text",
+									"enabled": true
+								},
+								{
+									"key": "teamId",
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"auth": {
