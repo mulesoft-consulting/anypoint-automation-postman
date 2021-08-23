@@ -2306,7 +2306,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams?ascending=true",
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams",
 							"host": [
 								"{{cloudhub-host}}"
 							],
@@ -2368,16 +2368,15 @@
 								},
 								{
 									"key": "ascending",
-									"value": "true",
-									"description": "Whether to sort ascending or descending.\nDefault value: true"
+									"value": "1",
+									"description": "Whether to sort ascending or descending.\nDefault value: true",
+									"disabled": true
 								}
 							],
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								}
 							]
 						}
@@ -2429,7 +2428,7 @@
 								},
 								{
 									"key": "teamId",
-									"value": "ac6b996b-b77c-4193-986d-d6e4daa11446"
+									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
 								}
 							]
 						}
@@ -2449,7 +2448,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"parent_team_id\": \"99c41e16-1075-40ae-8c8b-d722a8256f81\",\n  \"team_name\": \"New Team\",\n  \"team_type\": \"internal\"\n}",
+							"raw": "{\n  \"parent_team_id\": \"99c41e16-1075-40ae-8c8b-d722a8256f81\",\n  \"team_name\": \"Terraform_Test_2\",\n  \"team_type\": \"internal\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2542,7 +2541,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"parent_team_id\": \"59a065cf-2d31-4488-9d67-d380a820166b\"\n}",
+							"raw": "{\n  \"parent_team_id\": \"99c41e16-1075-40ae-8c8b-d722a8256f81\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2612,7 +2611,7 @@
 								},
 								{
 									"key": "teamId",
-									"value": "ac6b996b-b77c-4193-986d-d6e4daa11446"
+									"value": "87d9fb7f-29fe-47df-8da2-c57cd4a743e4"
 								}
 							]
 						}
@@ -2648,7 +2647,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings?membership_type=&search=",
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings?offset=0&limit=250",
 							"host": [
 								"{{cloudhub-host}}"
 							],
@@ -2665,36 +2664,34 @@
 								{
 									"key": "membership_type",
 									"value": "",
-									"description": "Include the group access mappings that grant the provided membership type By default, all group access mappings are returned"
+									"description": "Include the group access mappings that grant the provided membership type By default, all group access mappings are returned",
+									"disabled": true
 								},
 								{
 									"key": "search",
 									"value": "",
-									"description": "A search string to use for case-insensitive partial matches on external group name"
+									"description": "A search string to use for case-insensitive partial matches on external group name",
+									"disabled": true
 								},
 								{
 									"key": "offset",
 									"value": "0",
-									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value: 0",
-									"disabled": true
+									"description": "The number of records to omit from the response.\nDefault value: 0\nMin value: 0"
 								},
 								{
 									"key": "limit",
 									"value": "250",
-									"description": "Maximum records to retrieve per request. \nDefault: 25\nMin: 0 \nMax: 500 ",
-									"disabled": true
+									"description": "Maximum records to retrieve per request. \nDefault: 25\nMin: 0 \nMax: 500 "
 								}
 							],
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": null
 								},
 								{
 									"key": "teamId",
-									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+									"value": null
 								}
 							]
 						}
@@ -2758,7 +2755,7 @@
 								},
 								{
 									"key": "member_ids",
-									"value": "",
+									"value": "18f23771-c78a-4be2-af8f-1bae66f43942",
 									"description": "[Array or String] Include the members of the team that have ids in this list",
 									"disabled": true
 								},
@@ -2796,13 +2793,11 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": null
 								},
 								{
 									"key": "teamId",
-									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+									"value": null
 								}
 							]
 						}
@@ -2982,14 +2977,14 @@
 							],
 							"query": [
 								{
-									"key": "role_id",
-									"value": "",
+									"key": "role_ids",
+									"value": "833ab9ca-0c72-45ba-9764-1df83240db57",
 									"description": "return only role assignments containing one of the supplied role_ids",
 									"disabled": true
 								},
 								{
 									"key": "search",
-									"value": "",
+									"value": "nothing at all",
 									"description": "A search string to use for case-insensitive partial matches on role name",
 									"disabled": true
 								},
@@ -3001,7 +2996,7 @@
 								},
 								{
 									"key": "limit",
-									"value": "250",
+									"value": "zeraz",
 									"description": "Maximum records to retrieve per request. \nDefault: 25\nMin: 0 \nMax: 500 ",
 									"disabled": true
 								}
@@ -3009,13 +3004,11 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
-									"value": "9363290f-e795-4be6-9ca9-9efc1229b8f2"
+									"value": "99c41e16-1075-40ae-8c8b-d722a8256f81"
 								}
 							]
 						}
@@ -3099,7 +3092,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"role_id\": \"833ab9ca-0c72-45ba-9764-1df83240db57\",\n    \"context_params\": {\n      \"org\": \"{{cloudhub-org}}\"\n    }\n  }\n]",
+							"raw": "[\n  {\n    \"role_id\": \"d74ef94a-4292-4896-b860-b05bd7f90d6d\",\n    \"context_params\": {\n      \"org\": \"{{cloudhub-org}}\"\n    }\n  }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
