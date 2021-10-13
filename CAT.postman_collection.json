@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "07ac1b98-9da0-4540-a8d1-0494dddae181",
+		"_postman_id": "e8b216c9-f2a3-4e5b-b7eb-c5d47183eb70",
 		"name": "CAT",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -2094,15 +2094,11 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "userid",
-									"value": "{{cloudhub-user-id}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-user-id}}"
 								}
 							]
 						}
@@ -2166,15 +2162,11 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "userid",
-									"value": "{{cloudhub-user-id}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-user-id}}"
 								}
 							]
 						}
@@ -2210,15 +2202,11 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "userid",
-									"value": "{{cloudhub-user-id}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-user-id}}"
 								},
 								{
 									"key": "rolegroupid",
@@ -2258,15 +2246,11 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "userid",
-									"value": "{{cloudhub-user-id}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-user-id}}"
 								},
 								{
 									"key": "rolegroupid",
@@ -2422,9 +2406,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
@@ -2470,9 +2452,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								}
 							]
 						}
@@ -2515,9 +2495,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
@@ -2565,9 +2543,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
@@ -2605,9 +2581,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
@@ -2687,11 +2661,59 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": null
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
-									"value": null
+									"value": "99c41e16-1075-40ae-8c8b-d722a8256f81"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put groupmappings",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "XSRF-TOKEN",
+								"value": "{{csrftoken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"external_group_name\": \"cat_ad_group\",\n    \"membership_type\": \"maintainer\"\n  },\n  {\n    \"external_group_name\": \"cat_ad_group1\",\n    \"membership_type\": \"maintainer\"\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings",
+							"host": [
+								"{{cloudhub-host}}"
+							],
+							"path": [
+								"accounts",
+								"api",
+								"organizations",
+								":orgId",
+								"teams",
+								":teamId",
+								"groupmappings"
+							],
+							"variable": [
+								{
+									"key": "orgId",
+									"value": "{{cloudhub-org}}"
+								},
+								{
+									"key": "teamId",
+									"value": "99c41e16-1075-40ae-8c8b-d722a8256f81"
 								}
 							]
 						}
@@ -2856,9 +2878,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
@@ -2916,9 +2936,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
@@ -3066,9 +3084,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
@@ -3130,9 +3146,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}",
-									"type": "text",
-									"enabled": true
+									"value": "{{cloudhub-org}}"
 								},
 								{
 									"key": "teamId",
