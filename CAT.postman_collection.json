@@ -24,9 +24,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -40,7 +40,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "vpc",
@@ -76,9 +76,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -92,7 +92,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "vpc",
@@ -128,9 +128,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers/:dlbid",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers/:dlbid",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -145,7 +145,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "vpc",
@@ -176,9 +176,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers/:lbdid",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs/:vpc/loadbalancers/:lbdid",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -193,7 +193,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "vpc",
@@ -229,9 +229,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/environments",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/environments",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -243,7 +243,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -266,9 +266,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/environments/:envId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/environments/:envId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -281,7 +281,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "envId",
@@ -336,9 +336,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/environments",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/environments",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -350,7 +350,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -382,9 +382,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/environments/:envId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/environments/:envId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -397,7 +397,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "envId",
@@ -424,9 +424,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/environments/:envId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/environments/:envId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -439,7 +439,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "envId",
@@ -480,9 +480,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -494,7 +494,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -517,9 +517,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -531,7 +531,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -554,9 +554,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs/:vpcId",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs/:vpcId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -569,7 +569,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "vpcId",
@@ -605,9 +605,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs/:vpcId",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs/:vpcId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -620,7 +620,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "vpcId",
@@ -647,9 +647,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/cloudhub/api/organizations/:orgId/vpcs/:vpcId",
+							"raw": "{{url}}/cloudhub/api/organizations/:orgId/vpcs/:vpcId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"cloudhub",
@@ -662,7 +662,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "vpcId",
@@ -703,9 +703,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/invites",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/invites",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -717,7 +717,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -740,9 +740,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/rolegroups",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/rolegroups",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -754,7 +754,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -772,9 +772,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/access_tokens/{{anypoint_access_token}}",
+							"raw": "{{url}}/accounts/api/access_tokens/{{anypoint_access_token}}",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -836,9 +836,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/v2/oauth2/token",
+							"raw": "{{url}}/accounts/api/v2/oauth2/token",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -897,9 +897,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/login",
+							"raw": "{{url}}/accounts/login",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -931,9 +931,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}",
+							"raw": "{{url}}",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							]
 						}
 					},
@@ -951,7 +951,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Example\",\n    \"parentOrganizationId\": \"{{cloudhub-org}}\",\n    \"ownerId\": \"18f23771-c78a-4be2-af8f-1bae66f43942\",\n    \"entitlements\": {\n        \"createSubOrgs\": true,\n        \"createEnvironments\": true,\n        \"globalDeployment\": false,\n        \"vCoresProduction\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresSandbox\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresDesign\": {\n            \"assigned\": 0.1\n        },\n        \"staticIps\": {\n            \"assigned\": 1\n        },\n        \"vpcs\": {\n            \"assigned\": 0\n        },\n        \"loadBalancer\": {\n            \"assigned\": 0\n        },\n        \"vpns\": {\n            \"assigned\": 0\n        }\n    }\n}",
+							"raw": "{\n    \"name\": \"Example\",\n    \"parentOrganizationId\": \"{{organization_id}}\",\n    \"ownerId\": \"18f23771-c78a-4be2-af8f-1bae66f43942\",\n    \"entitlements\": {\n        \"createSubOrgs\": true,\n        \"createEnvironments\": true,\n        \"globalDeployment\": false,\n        \"vCoresProduction\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresSandbox\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresDesign\": {\n            \"assigned\": 0.1\n        },\n        \"staticIps\": {\n            \"assigned\": 1\n        },\n        \"vpcs\": {\n            \"assigned\": 0\n        },\n        \"loadBalancer\": {\n            \"assigned\": 0\n        },\n        \"vpns\": {\n            \"assigned\": 0\n        }\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -959,9 +959,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations",
+							"raw": "{{url}}/accounts/api/organizations",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -979,7 +979,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"Example\",\n    \"parentOrganizationId\": \"{{cloudhub-org-cat}}\",\n    \"ownerId\": \"18f23771-c78a-4be2-af8f-1bae66f43942\",\n    \"entitlements\": {\n        \"createSubOrgs\": true,\n        \"createEnvironments\": true,\n        \"globalDeployment\": false,\n        \"vCoresProduction\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresSandbox\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresDesign\": {\n            \"assigned\": 0.1\n        },\n        \"staticIps\": {\n            \"assigned\": 1\n        },\n        \"vpcs\": {\n            \"assigned\": 0\n        },\n        \"loadBalancer\": {\n            \"assigned\": 0\n        },\n        \"vpns\": {\n            \"assigned\": 0\n        }\n    }\n}",
+							"raw": "{\n    \"name\": \"Example\",\n    \"parentOrganizationId\": \"{{organization_id-cat}}\",\n    \"ownerId\": \"18f23771-c78a-4be2-af8f-1bae66f43942\",\n    \"entitlements\": {\n        \"createSubOrgs\": true,\n        \"createEnvironments\": true,\n        \"globalDeployment\": false,\n        \"vCoresProduction\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresSandbox\": {\n            \"assigned\": 0.2\n        },\n        \"vCoresDesign\": {\n            \"assigned\": 0.1\n        },\n        \"staticIps\": {\n            \"assigned\": 1\n        },\n        \"vpcs\": {\n            \"assigned\": 0\n        },\n        \"loadBalancer\": {\n            \"assigned\": 0\n        },\n        \"vpns\": {\n            \"assigned\": 0\n        }\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -987,9 +987,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations",
+							"raw": "{{url}}/accounts/api/organizations",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1006,9 +1006,9 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgid",
+							"raw": "{{url}}/accounts/api/organizations/:orgid",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1032,9 +1032,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgid",
+							"raw": "{{url}}/accounts/api/organizations/:orgid",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1061,9 +1061,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/members",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/members",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1075,7 +1075,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -1128,7 +1128,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"action\": \"POST\",\n    \"namespace\": \"cs_auth\",\n    \"resources\": [\n        \"/organizations/{{cloudhub-org}}/domainClients\",\n        \"/organizations/{{cloudhub-org}}/domainClients/*\"\n    ]\n}",
+							"raw": "{\n    \"action\": \"POST\",\n    \"namespace\": \"cs_auth\",\n    \"resources\": [\n        \"/organizations/{{organization_id}}/domainClients\",\n        \"/organizations/{{organization_id}}/domainClients/*\"\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1136,9 +1136,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/authorize",
+							"raw": "{{url}}/accounts/api/authorize",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1170,9 +1170,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/roles",
+							"raw": "{{url}}/accounts/api/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1233,9 +1233,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id/roles",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1255,7 +1255,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "rolegroup-id",
@@ -1281,9 +1281,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id/roles",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1297,7 +1297,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "rolegroup-id",
@@ -1333,9 +1333,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id/roles",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1349,7 +1349,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "rolegroup-id",
@@ -1381,9 +1381,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1395,7 +1395,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -1430,9 +1430,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1445,7 +1445,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "rolegroup-id",
@@ -1481,9 +1481,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1495,7 +1495,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -1527,9 +1527,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1542,7 +1542,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "rolegroup-id",
@@ -1578,9 +1578,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id",
+							"raw": "{{url}}/accounts/api/organizations/:org-id/rolegroups/:rolegroup-id",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1593,7 +1593,7 @@
 							"variable": [
 								{
 									"key": "org-id",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "rolegroup-id",
@@ -1618,9 +1618,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"raw": "{{url}}/accounts/api/organizations/:orgId/users",
 									"host": [
-										"{{cloudhub-host}}"
+										"{{url}}"
 									],
 									"path": [
 										"accounts",
@@ -1652,7 +1652,7 @@
 									"variable": [
 										{
 											"key": "orgId",
-											"value": "{{cloudhub-org}}"
+											"value": "{{organization_id}}"
 										}
 									]
 								}
@@ -1665,9 +1665,9 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
+									"raw": "{{url}}/accounts/api/organizations/:orgId/users/:userId",
 									"host": [
-										"{{cloudhub-host}}"
+										"{{url}}"
 									],
 									"path": [
 										"accounts",
@@ -1680,7 +1680,7 @@
 									"variable": [
 										{
 											"key": "orgId",
-											"value": "{{cloudhub-org}}"
+											"value": "{{organization_id}}"
 										},
 										{
 											"key": "userId",
@@ -1712,9 +1712,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"raw": "{{url}}/accounts/api/organizations/:orgId/users",
 									"host": [
-										"{{cloudhub-host}}"
+										"{{url}}"
 									],
 									"path": [
 										"accounts",
@@ -1726,7 +1726,7 @@
 									"variable": [
 										{
 											"key": "orgId",
-											"value": "{{cloudhub-org}}"
+											"value": "{{organization_id}}"
 										}
 									]
 								}
@@ -1754,9 +1754,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"raw": "{{url}}/accounts/api/organizations/:orgId/users",
 									"host": [
-										"{{cloudhub-host}}"
+										"{{url}}"
 									],
 									"path": [
 										"accounts",
@@ -1768,7 +1768,7 @@
 									"variable": [
 										{
 											"key": "orgId",
-											"value": "{{cloudhub-org}}"
+											"value": "{{organization_id}}"
 										}
 									]
 								}
@@ -1796,9 +1796,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
+									"raw": "{{url}}/accounts/api/organizations/:orgId/users/:userId",
 									"host": [
-										"{{cloudhub-host}}"
+										"{{url}}"
 									],
 									"path": [
 										"accounts",
@@ -1811,7 +1811,7 @@
 									"variable": [
 										{
 											"key": "orgId",
-											"value": "{{cloudhub-org}}"
+											"value": "{{organization_id}}"
 										},
 										{
 											"key": "userId",
@@ -1843,9 +1843,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users",
+									"raw": "{{url}}/accounts/api/organizations/:orgId/users",
 									"host": [
-										"{{cloudhub-host}}"
+										"{{url}}"
 									],
 									"path": [
 										"accounts",
@@ -1857,7 +1857,7 @@
 									"variable": [
 										{
 											"key": "orgId",
-											"value": "{{cloudhub-org}}"
+											"value": "{{organization_id}}"
 										}
 									]
 								}
@@ -1885,9 +1885,9 @@
 									}
 								},
 								"url": {
-									"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userId",
+									"raw": "{{url}}/accounts/api/organizations/:orgId/users/:userId",
 									"host": [
-										"{{cloudhub-host}}"
+										"{{url}}"
 									],
 									"path": [
 										"accounts",
@@ -1900,7 +1900,7 @@
 									"variable": [
 										{
 											"key": "orgId",
-											"value": "{{cloudhub-org}}"
+											"value": "{{organization_id}}"
 										},
 										{
 											"key": "userId",
@@ -1939,9 +1939,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/invites",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/invites",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1953,7 +1953,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -1975,9 +1975,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/invites",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/invites",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -1989,7 +1989,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -2011,9 +2011,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/invites",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/invites",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2025,7 +2025,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -2078,9 +2078,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/roles",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/users/:userid/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2094,7 +2094,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "userid",
@@ -2126,7 +2126,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"organizationId\": \"{{cloudhub-org}}\",\n    \"userId\": \"{{cloudhub-user-id}}\",\n    \"roleGroupId\": \"{{cloudhub-rolegroup-id}}\"\n}",
+							"raw": "{\n    \"organizationId\": \"{{organization_id}}\",\n    \"userId\": \"{{cloudhub-user-id}}\",\n    \"roleGroupId\": \"{{cloudhub-rolegroup-id}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2134,9 +2134,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/rolegroups?limit=25&offset=0",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/users/:userid/rolegroups?limit=25&offset=0",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2162,7 +2162,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "userid",
@@ -2185,9 +2185,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/rolegroups/:rolegroupid",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/users/:userid/rolegroups/:rolegroupid",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2202,7 +2202,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "userid",
@@ -2229,9 +2229,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/users/:userid/rolegroups/:rolegroupid",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/users/:userid/rolegroups/:rolegroupid",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2246,7 +2246,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "userid",
@@ -2290,9 +2290,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2360,7 +2360,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -2391,9 +2391,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2406,7 +2406,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2438,9 +2438,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2452,7 +2452,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								}
 							]
 						}
@@ -2480,9 +2480,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2495,7 +2495,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2527,9 +2527,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/parent",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/parent",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2543,7 +2543,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2566,9 +2566,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2581,7 +2581,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2621,9 +2621,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings?offset=0&limit=250",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings?offset=0&limit=250",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2661,7 +2661,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2693,9 +2693,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/groupmappings",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2709,7 +2709,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2749,9 +2749,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/members",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/members",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2847,9 +2847,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/members/:userId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/members/:userId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2878,7 +2878,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2905,9 +2905,9 @@
 							}
 						],
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/members/:userId",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/members/:userId",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -2936,7 +2936,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -2980,9 +2980,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -3022,7 +3022,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -3046,7 +3046,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"role_id\": \"d74ef94a-4292-4896-b860-b05bd7f90d6d\",\n    \"context_params\": {\n      \"org\": \"{{cloudhub-org}}\"\n    }\n  }\n]",
+							"raw": "[\n  {\n    \"role_id\": \"d74ef94a-4292-4896-b860-b05bd7f90d6d\",\n    \"context_params\": {\n      \"org\": \"{{organization_id}}\"\n    }\n  }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3054,9 +3054,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -3084,7 +3084,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
@@ -3108,7 +3108,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "[\n  {\n    \"role_id\": \"d74ef94a-4292-4896-b860-b05bd7f90d6d\",\n    \"context_params\": {\n      \"org\": \"{{cloudhub-org}}\"\n    }\n  }\n]",
+							"raw": "[\n  {\n    \"role_id\": \"d74ef94a-4292-4896-b860-b05bd7f90d6d\",\n    \"context_params\": {\n      \"org\": \"{{organization_id}}\"\n    }\n  }\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3116,9 +3116,9 @@
 							}
 						},
 						"url": {
-							"raw": "{{cloudhub-host}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
+							"raw": "{{url}}/accounts/api/organizations/:orgId/teams/:teamId/roles",
 							"host": [
-								"{{cloudhub-host}}"
+								"{{url}}"
 							],
 							"path": [
 								"accounts",
@@ -3146,7 +3146,7 @@
 							"variable": [
 								{
 									"key": "orgId",
-									"value": "{{cloudhub-org}}"
+									"value": "{{organization_id}}"
 								},
 								{
 									"key": "teamId",
